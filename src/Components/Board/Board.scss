@@ -1,0 +1,61 @@
+.Board {
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 75px;
+
+    tr {
+        td {
+            padding: 10px;
+            height: 60px;
+            width: 60px;
+            position: relative;
+            text-align: center;
+            border-right: 5px solid #0da192;
+            border-bottom: 5px solid #0da192;
+
+            &:last-child {
+                border-right-width: 0;
+            }
+        }
+
+        &:last-child {
+            td {
+                border-bottom-width: 0;
+            }
+        }
+    }
+}
+
+.Board-Cell {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.Switch32 {
+    height: 32px;
+    width: 32px;
+    fill: none;
+    stroke-width: 25px;
+}
+
+.Switch16 {
+    height: 16px;
+    width: 16px;
+    fill: none;
+    stroke-width: 25px;
+}
+
+.Switch-x {
+    stroke-width: 25px;
+    stroke: rgb(84, 84, 84);
+}
+
+.Switch-o {
+    stroke: rgb(242, 235, 211);
+    stroke-dasharray: 300;
+    stroke-dashoffset: 0;
+}

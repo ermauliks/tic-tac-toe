@@ -1,6 +1,37 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Tic Tac Toe using React - by Maulik Suchak
+* Project: *Tic Tac Toe game*
+* Time Taken: *~6hrs*
+* Language/Frameworks: *JavaScript(with React) + SCSS*
 
-## Available Scripts
+## Howdy! 👋
+
+Hey there, this is Maulik Suchak. This is my version of Tic Tac Toe
+
+![Tic Tac Toe HomePage](screenshot.png)
+
+
+## Features Implemented as MVP
+
+* You can play this against computer.
+* Displays the winner in the end in a popup.
+* Total wins counter for both Players.
+* Ability to make n x n table (TODO: winning logic is only for 3 x 3 right now)
+
+
+## Possible Enhancements
+
+* [UX] Store "score" in the local storage so it doesn't go back to 0 after browser refresh.
+* [UX] Multi-player realtime (could use Socket.io)
+* [Tech] Better SCSS organziation by using mixins, variable, etc.
+* [UX / Tech] Graceful degradation to support non-modern browser.
+
+
+## Setup & Development
+
+### Prerequisite
+* Make sure you have `node` installed -- recommended `6.4.1`.
+* Once you have a `node` installed, run `npm install` in this repo to get your dependencies.
+* (optional) `npm run build` to create build folder.
 
 In the project directory, you can run:
 
@@ -27,43 +58,49 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Technical Details
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Src Structure / Components
+```
+src
+├── index.js
+├── App.css
+├── App.js
+├── Components
+|   └── Board
+|       ├── Board.scss
+|       ├── Cross.jsx
+|       ├── index.jsx
+|       ├── Round.jsx
+|   └── Footer
+|       ├── Footer.scss
+|       ├── index.jsx
+|   └── Header
+|       ├── Header.scss
+|       ├── index.jsx
+|   └── ScoreBoard
+|       ├── index.jsx
+|       ├── ScoreBoard.scss
+├── utils
+|   └── lib.js
+public
+├── index.html
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Description / Data Flow / Approach
+* This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). Reason: wanted to move quickly since this structure will give me minimum things I'd need to create a MVP.
+* It draws n x n table to begin with.
+* Assigns click event to all cells and X (player A) takes the first turn.
+* I generate random number of the cell (0 - 8) for computer to make move. This logic has to be updated if we want to finish implementing n x n.
+* Tried to use minimal CSS to move quickly. Used SCSS to create better org structure.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Some Manual Test Cases
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Could write following automated unit tests.
 
-## Learn More
+*Unit tests*
+* Computer makes a move after Player A finishes the move
+* Automated next move of computer
+* Shows banner when game ends
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# tic-tac-toe
+Thank you!
