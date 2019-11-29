@@ -5,9 +5,8 @@
 
     tr {
         td {
-            padding: 10px;
-            height: 60px;
-            width: 60px;
+            height: 70px;
+            width: 70px;
             position: relative;
             text-align: center;
             border-right: 5px solid #0da192;
@@ -27,8 +26,8 @@
 }
 
 .Board-Cell {
-    height: 100%;
-    width: 100%;
+    height: 70px;
+    width: 70px;
     display: inline-block;
     position: absolute;
     left: 0;
