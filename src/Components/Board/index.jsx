@@ -2,7 +2,7 @@ import React from 'react';
 
 import Cross from './Cross';
 import Round from './Round';
-import ScoreBoard from '../ScoreBoard';
+import ScoreBoard from './ScoreBoard';
 import Banner from '../Banner';
 
 import './Board.scss';
@@ -55,7 +55,8 @@ class Board extends React.Component {
 
     endGame(result) {
         this.setState({
-            showBanner: true
+            showBanner: true,
+            turn: null
         });
     }
 
@@ -106,7 +107,7 @@ class Board extends React.Component {
     render() {
         return (
             <div>
-                <ScoreBoard totalWins={this.state.totalWins}/>
+                <ScoreBoard totalWins={this.state.totalWins} turn={this.state.turn}/>
                 {this.state.showBanner && <Banner restart={this.restart} winner={this.state.winner}/>}
                 <table className="Board" cellSpacing="0" cellPadding="0">
                     <tbody>

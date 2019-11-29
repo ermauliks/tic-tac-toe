@@ -58,3 +58,40 @@
     stroke-dasharray: 300;
     stroke-dashoffset: 0;
 }
+
+.ScoreBoard_Turn {
+    text-align: center;
+    margin-top: 5px;
+    font-style: italic;
+    height: 20px;
+}
+
+.ScoreBoard_Score {
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+    text-align: center;
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.ScoreBoard_Title {
+    margin-right: 10px;
+}
+
+.ScoreBoard_Count {
+    margin-left: 5px;
+    margin-right: 15px;
+    font-size: 30px;
+}
+
+.ScoreBoard_Icon {
+    padding: 10px;
+    background: #00dcc7;
+    border: 1px solid #909090;
+}
+
+.ScoreBoard_Icon--Turn {
+    border: 1px solid Black;
+}

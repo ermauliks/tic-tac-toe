@@ -70,6 +70,7 @@ src
 |   └── Board
 |       ├── Board.scss
 |       ├── Cross.jsx
+|       ├── ScoreBoard.jsx
 |       ├── index.jsx
 |       ├── Round.jsx
 |   └── Footer
@@ -78,9 +79,6 @@ src
 |   └── Header
 |       ├── Header.scss
 |       ├── index.jsx
-|   └── ScoreBoard
-|       ├── index.jsx
-|       ├── ScoreBoard.scss
 ├── utils
 |   └── lib.js
 public
