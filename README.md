@@ -21,6 +21,7 @@ Hey there, this is Maulik Suchak. This is my version of Tic Tac Toe
 ## Possible Enhancements
 
 * [UX] Store "score" in the local storage so it doesn't go back to 0 after browser refresh.
+* [UX / Tech] More smarter computer move instead of just letting it randomly choose one 
 * [UX] Multi-player realtime (could use Socket.io)
 * [Tech] Better SCSS organziation by using mixins, variable, etc.
 * [UX / Tech] Graceful degradation to support non-modern browser.
